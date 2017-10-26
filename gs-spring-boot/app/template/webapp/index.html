@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>主界面</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1"><!-- 宽度自动适配 -->
+    <meta content="telephone=no" name="format-detection" /><!-- 不识别页面上的数字为可拨打号码 -->
+
+    <link rel="stylesheet" type="text/css" href="ipu/css/ipu.css">
+    <link rel="stylesheet" type="text/css" href="css/awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/project.css">
+
+    <script src="js/lib/requirejs/require.js"></script>
+    <script src="js/require-config.js"></script>
+    <script src="js/biz/index.js"></script>
+    <script src="js/lib/jquery/jquery-2.2.4.js"></script>
+
+</head>
+<body class="page-home" ontouchstart="">
+<!-- 成就列表 -->
+<div class="ipu-row-flex ipu-row-flex-ver">
+    <!-- 展示切换内容区 -->
+    <div class="ipu-col">
+        <div class="ipu-flex-content">
+            <div class="ipu-nav-content">
+                <ul>
+                    <!-- 首页 -->
+                    <li class="page-index">
+                        <div class="ipu-row-flex ipu-row-flex-ver">
+                            <div class="ipu-col ipu-col-auto">
+                                <header class="ipu-toolbar">
+                                    <h1 class="ipu-toolbar-title">成就榜</h1>
+                                </header>
+                            </div>
+
+                            <div class="ipu-col">
+                                <div class="ipu-flex-content">
+                                    <div class="ipu-refresh-wrapper">
+                                        <div class="ipu-refresh-content">
+                                            <div class="page-content">
+                                                <div class="ipu-list ipu-list-media list-medal" id="AchieveList-template">
+                                                    <ul>
+                                                        <div id="Achieve_list"></div>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 达人榜Top10 -->
+                    <li class="page-fav">
+                        <div class="ipu-row-flex ipu-row-flex-ver ">
+                            <div class="ipu-col ipu-col-auto ">
+                                <header class="ipu-toolbar page-head">
+                                    <h1 class="ipu-toolbar-title">达人榜TOP10</h1>
+                                </header>
+                            </div>
+
+                            <div class="ipu-col ">
+                                <div class="page-content">
+                                    <div class="ipu-list achieve-user-list">
+                                        <div id="UserachNum"></div>
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <!-- 我的成就 -->
+                    <li class="page-his">
+                        <div class="ipu-row-flex ipu-row-flex-ver  page-his">
+                            <div class="ipu-col ipu-col-auto page-head">
+                                <header class="ipu-toolbar">
+                                    <h1 class="ipu-toolbar-title">我的成就</h1>
+                                </header>
+                            </div>
+
+                            <div class="ipu-col">
+                                <div class="ipu-flex-content">
+                                    <div class="ipu-tab ipu-tab-fixed">
+                                        <ul class="ipu-tab-title ipu-tab-title-link">
+                                            <li class="ipu-current">进行中</li>
+                                            <li>已完成</li>
+                                        </ul>
+                                        <div class="ipu-tab-body">
+                                            <ul class="ipu-tab-body-wrapper" style="transform: translate3d(0%, 0px, 0px);">
+                                                <li class="ipu-current">
+                                                    <div class="page-content">
+                                                        <div class="ipu-list ipu-list-media list-medal">
+                                                                <div id="myach_ing"></div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="">
+                                                    <div class="page-content">
+                                                        <div class="ipu-list ipu-list-media list-medal">
+                                                            <div id="myach_ed"></div>
+                                                    </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 我的 -->
+                    <li class="page-user">
+                        <div class="ipu-row-flex ipu-row-flex-ver page-user">
+                            <div class="ipu-col ipu-col-auto page-head">
+                                <header class="ipu-toolbar">
+                                    <h1 class="ipu-toolbar-title">个人信息</h1>
+                                </header>
+                            </div>
+
+                            <div class="ipu-col category-body">
+                                <div class="ipu-list ipu-list-form ipu-list-media">
+                                    <ul>
+                                        <li class="ipu-list-item user-info">
+                                            <div class="ipu-list-item-media">
+                                                头像
+                                            </div>
+                                            <div class="ipu-list-item-inner">
+                                                <div class="ipu-list-item-after">
+                                                    <img class="iconsImg" src="img/avatar.png" alt=""/>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="ipu-list ipu-list-form">
+                                    <ul>
+                                        <li class="ipu-list-item user-nickname">
+                                            <div class="ipu-list-item-inner">
+                                                <div class="ipu-list-item-label">
+                                                    姓名
+                                                </div>
+                                                <div class="ipu-list-item-input-wrap">
+                                                    <input class="ipu-list-item-input" type="text" placeholder="请输入用户名" readonly value="${username}" id="User_NT">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="ipu-list-item">
+                                            <div class="ipu-list-item-inner">
+                                                <div class="ipu-list-item-label">
+                                                    账号
+                                                </div>
+                                                <div class="ipu-list-item-input-wrap">
+                                                    <input class="ipu-list-item-input" type="text" placeholder="" readonly value="${usermail}" id="User_Mail"/>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="ipu-list-item">
+                                            <div class="ipu-list-item-inner">
+                                                <div class="ipu-list-item-label">
+                                                    部门
+                                                </div>
+                                                <div class="ipu-list-item-input-wrap">
+                                                    <input class="ipu-list-item-input" type="text" placeholder="" readonly value="${userdept}" id="User_Dept">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="ipu-fn-m">
+                                    <button class="ipu-btn ipu-btn-l ipu-btn-block ipu-btn-warning" id="login_out">注销</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航区 -->
+    <div class="ipu-col ipu-col-auto">
+        <nav class="ipu-navbar ">
+            <a class="ipu-navbar-item" href="javascript:;">
+                <span class="ipu-icon fa fa-home"></span>
+            </a>
+            <a class="ipu-navbar-item " href="javascript:;">
+                <span class="ipu-icon fa fa-list-ul"></span>
+            </a>
+            <a class="ipu-navbar-item" href="javascript:;">
+                <span class="ipu-icon fa fa-address-card"></span>
+            </a>
+            <a class="ipu-navbar-item" href="javascript:;">
+                <span class="ipu-icon fa fa-user"></span>
+            </a>
+        </nav>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+/*  公用  */
+.page-content{
+    padding: .1rem 0;
+}
+.ipu-toolbar-title{
+    font-size: .16rem;
+}
+.ipu-list-item-inner{
+    color: #4a4e5a;
+}
+.ipu-list-item-title,
+.ipu-list-item-label,
+.ipu-list-item-input,
+.ipu-list-item-after{
+    line-height: .32rem;
+}
+.ipu-list > ul:before, .ipu-list > ul:after,
+.ipu-list > ul > li:not(:last-child) .ipu-list-item-inner:after{
+    background-color: rgba(38, 89, 205, .04);
+}
+.ipu-list-item-link:after{
+    background-size: .12rem;
+}
+body{
+    color: #4a4e5a;
+}
+/* 登录页 */
+.app-logo {
+    padding: .32rem 0;
+}
+.app-logo .logo-img {
+    width: .6rem;
+    height: .6rem;
+    margin:  0 auto;
+    display: block;
+    background: url(../img/logo.png) center center no-repeat;
+    background-size: contain;
+    border-radius: .04rem;
+}
+.logo-name{
+    text-align: center;
+    font-size: .13rem;
+    margin-top: .05rem
+}
+.login-body{
+    background-color: #fff;
+}
+.login-form-savepass  .ipu-checkbox{
+    vertical-align: top;
+}
+.login-form{
+    margin: 0 .15rem;
+}
+.login-form .login-form-row{
+    height:.55rem;
+    box-sizing: border-box;
+    border:1px solid #e8e8e8;
+    background:url("../img/icon-account.png") .18rem center no-repeat #fcfcfc;
+    background-size: .16rem auto;
+    position: relative;
+}
+.login-form .login-form-input{
+    display: block;
+    border: none;
+    font-size: .15rem;
+    color: #4A4E5A;
+    padding:.02rem .44rem 0rem .55rem ;
+    box-sizing: border-box;
+    width: 100%;
+    background: none;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+}
+.login-form .login-form-input::-webkit-input-placeholder {
+    color: #999;
+}
+.login-form .login-form-input:focus::-webkit-input-placeholder {
+    color: #4A4E5A;
+}
+.login-form-row-pass .login-form-input{
+    padding-right: 1rem;
+}
+.login-form .login-form-row.login-form-row-account{
+    border-radius: 0.1rem 0.1rem 0 0;
+}
+.login-form .login-form-row.login-form-row-pass{
+    border-top: none;
+    background-image: url("../img/icon-pass.png");
+}
+.login-form .login-form-row.login-form-row-verify {
+    border-radius: 0 0 0.1rem 0.1rem;
+    border-top: none;
+    background-image: none;
+}
+.login-form-row-verify .login-input-clear{
+    right: .9rem;
+}
+.login-form-row-verify .login-form-input{
+    padding-right: 1.3rem;
+}
+.btn-getcode{
+    position: absolute;
+    right: .1rem;
+    top:.13rem;
+}
+.login-form-row .fa{
+    position: absolute;
+    font-size: .3rem;
+    color: #bebebe;
+    top:.13rem;
+    left: .21rem;
+}
+
+.login-form-button{
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    line-height: .5rem;
+    font-size: .16rem;
+    margin-top: .20rem;
+}
+.login-form-button:disabled{
+    opacity: .3;
+}
+.login-input-clear,
+.pass-text{
+    position: absolute;
+    background-size: .13rem;
+    right: .0rem;
+    top:.01rem;
+    width: .4rem;
+    height: .55rem;
+    display: none;
+}
+.login-input-clear{
+    background:url("../img/input-clear.png") center center no-repeat;
+    background-size: .13rem;
+    right: .0rem;
+}
+.pass-text{
+    background:url("../img/pass-text.png") center center no-repeat;
+    background-size: .18rem;
+    right: .6rem;
+}
+.pass-text.pass-pass{
+    background-image: url("../img/pass-pass.png");
+}
+.login-form-passOp{
+    margin-top: .18rem;
+    font-size: .13rem;
+    line-height: .2rem;
+}
+.login-form-fogetpass{
+    float: right;
+    font-size: .15rem;
+    padding: 0 .03rem;
+    color: #4a4e5a;
+}
+.login-form-savepass{
+    display:inline-block;
+    color: #a3a4aa;
+    font-size: 0.13rem;
+}
+.pass-text:after{
+    height: .1rem;
+    border: 1px solid #d6d6d6;
+    position: absolute;
+    top:.21rem;
+    right: -.12rem;
+    content: '';
+}
+.ipu-checkbox input:before{
+    border-color: #e8e8e8;
+}
+
+/* 用户信息页面 */
+.list-block .user-info a:before{
+    content: none;
+}
+.list-block .user-info{
+    min-height: .85rem;
+}
+.list-block .user-info a{
+    margin-left: 0;
+    padding: .1rem;
+    overflow: hidden;
+}
+.user-info img{
+    width: .65rem;
+    height: .65rem;
+    margin-right: .2rem;
+    float: right;
+}
+.user-info .user-info-items{
+    margin-left: .85rem;
+    line-height: 1;
+}
+.user-info-items .user-nickname{
+    font-size: .15rem;
+    margin-top: .13rem;
+}
+.user-info-items .user-mail{
+    font-size: .13rem;
+    margin-top: .1rem;
+}
+
+.user-list-block li a input{
+    display: block;
+    text-align: right;
+    width: 100%;
+    color: #797b80;
+    font-size: .14rem;
+    line-height: .5rem;
+    border: none;
+}
+.user-list-block .user-info img{
+    float: right;
+    margin-right: .34rem;
+}
+.user-list-block li.user-info a:after{
+    content: '';
+}
+.user-list-block li.user-info a{
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.user-list-block .user-info label{
+    line-height: .85rem;
+}
+.page-user .ipu-list-item-input {
+    text-align: right;
+}
+/* new project */
+.achieve-medal{
+    width: .5rem;
+    height: .5rem;
+    max-width: .5rem;
+}
+.media-info{
+    overflow: hidden;
+}
+.media-info-row{
+    overflow: hidden;
+    padding: .02rem 0;
+}
+.media-info-row .label,
+.media-info-row .value{
+    float: left;
+    font-size: .14rem;
+}
+.media-info-row .label{
+    color: #444;
+}
+.media-info-row .value{
+    color: #777;
+}
+.media-info-row-desc .value{
+    max-height: .38rem;
+    line-height: .19rem;
+    margin-top: .03rem;
+}
+.page-his .achieve-medal{
+    width: .32rem;
+    height: .32rem;
+}
+
+.page-content .ipu-list ul li{
+    counter-increment: open-count;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.page-fav .ipu-list-item-media{
+    width: .14rem;
+}
+.page-fav .ipu-list ul li .ipu-list-item-media:before{
+    position: absolute;
+    left: .15rem;
+    top: .12rem;
+    width: .18rem;
+    height: .3rem;
+    content: counter(open-count);
+    text-align: center;
+    line-height: .24rem;
+    color: #fff;
+    font-size: 0.14rem;
+    background-color: #f4a034
+}
+.page-fav .ipu-list ul li:nth-child(1) .ipu-list-item-media:before{
+    background-color: #5f9be6;
+}
+.page-fav .ipu-list ul li:nth-child(2) .ipu-list-item-media:before{
+    background-color: #F8A796;
+}
+.page-fav .ipu-list ul li:nth-child(3) .ipu-list-item-media:before{
+    background-color: #9bcd46;
+}
+.page-fav .ipu-list ul li .ipu-list-item-media:after{
+    width: 0;
+    height: 0;
+    border-left: .09rem solid transparent;
+    border-right: .09rem solid transparent;
+    border-bottom: .09rem solid #fff;
+    position: absolute;
+    content: '';
+    left: .15rem;
+    top: .34rem;
+    z-index: 1;
+}
+
+.achieve-user-list .ipu-list-item-after {
+    font-size: .14rem;
+}
+.achieve-user-list .ipu-list-item-after .label{
+    color: #666;
+}
+.achieve-user-list .ipu-list-item-after .value.ipu-txt-highlight{
+    margin-right: .1rem;
+}
+/* 点击特效 */
+.list-medal li.ipu-active{
+    background-color: #eee;
+}
+.ipu-fn-left.ipu-active{
+    background-color: rgba(0,0,0,.1);
+}
+.ipu-navbar-item.ipu-active{
+    background-color: #eee;
+}

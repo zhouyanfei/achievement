@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>成就详情</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1"><!-- 宽度自动适配 -->
+    <meta content="telephone=no" name="format-detection" /><!-- 不识别页面上的数字为可拨打号码 -->
+
+    <link rel="stylesheet" type="text/css" href="ipu/css/ipu.css">
+    <link rel="stylesheet" type="text/css" href="css/awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/project.css">
+
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="js/lib/requirejs/require.js"></script>
+    <script src="js/require-config.js"></script>
+    <script src="js/biz/detail.js"></script>
+    <script src="js/lib/jquery/jquery-2.2.4.js"></script>
+
+
+</head>
+<body class="page-detail" ontouchstart="">
+<div class="ipu-row-flex ipu-row-flex-ver">
+    <div class="ipu-col ipu-col-auto">
+        <header class="ipu-toolbar">
+            <h1 class="ipu-toolbar-title">成就详情</h1>
+            <a class="ipu-fn-left" href="javascript:history.back(-1);">
+                <i class="ipu-icon fa fa-chevron-left"></i>
+            </a>
+        </header>
+    </div>
+
+    <div class="ipu-col">
+        <div class="ipu-list ipu-list-media list-media">
+            <ul>
+                <li class="">
+                    <a class="ipu-list-item">
+                        <div class="ipu-list-item-media">
+                            <img src="img/logo.png" alt="" class="achrive-media">
+                        </div>
+                        <div class="ipu-list-item-inner">
+                            <div class="ipu-list-item-title-row">
+                                <div class="ipu-list-item-title">
+                                    ${ach_name}
+                                </div>
+                            </div>
+                            <div class="ipu-list-item-subtitle">
+
+                                <div class="media-info">
+                                    <div class="media-info-row">
+                                        <span class="label">生效时间：</span>
+                                        <span class="value">${start_time}</span>
+                                    </div>
+                                    <div class="media-info-row">
+                                        <span class="label">失效时间：</span>
+                                        <span class="value">${end_time}</span>
+                                    </div>
+                                    <div class="media-info-row">
+                                        <span class="label">总挑战人数：</span>
+                                        <span class="value">${challenge_num}</span>
+                                    </div>
+                                    <div class="media-info-row">
+                                        <span class="label">已完成人数：</span>
+                                        <span class="value">${complete_num}</span>
+                                    </div>
+                                    <div class="media-info-row">
+                                        <span class="label">成就说明：</span>
+                                        <span class="value">
+                                                ${ach_introduc}
+                                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 未参加挑战显示-->
+        <div class="ipu-fn-m" id="challengeing">
+            <button class="ipu-btn ipu-btn-l ipu-btn-block ipu-btn-highlight" id="challenge_btn">挑战</button>
+        </div>
+        <!-- 参加挑战未完成显示 -->
+        <ul class="ipu-tiled" id="finishing">
+            <li class="ipu-fn-m">
+                <button class="ipu-btn ipu-btn-block ipu-btn-success" id="finised_btn">完成</button>
+            </li>
+            <li class="ipu-fn-m">
+                <button class="ipu-btn ipu-btn-block ipu-btn-warning" id="quit_btn">放弃</button>
+            </li>
+        </ul>
+        <!-- 参加挑战已完成显示 -->
+        <div class="ipu-fn-m" id="finished">
+            <button class="ipu-btn ipu-btn-l ipu-btn-block ipu-btn-highlight" id="share_btn">分享成就</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $("#challengeing").hide();
+    $("#finishing").hide();
+    $("#finished").hide();
+    var ach_id = "${ach_id}";
+    var ach_name = "${ach_name}";
+    var state ="${state}";
+    if(state=="-1"){ //未参加挑战
+        $("#challengeing").show();
+    }else if(state=="0"){ //参加挑战未完成
+        $("#finishing").show();
+    }else if(state=="1"){ //参加挑战已完成
+        $("#finished").show();
+    }
+</script>
+</body>
+</html>

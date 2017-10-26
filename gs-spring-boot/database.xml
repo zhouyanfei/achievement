@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+     <achieve
+        type="dbcp"
+        driver="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://121.42.183.206:3307/achieve?useUnicode=true"
+        user="ipu"
+        passwd="ipumysql"
+        initialSize="5"
+        maxActive="20"
+        maxIdle="5"
+        maxWait="1000"
+     />
+     <ipu_home
+             type="dbcp"
+             driver="com.mysql.jdbc.Driver"
+             url="jdbc:mysql://121.42.183.206:3307/ipu_home?useUnicode=true"
+             user="ipu"
+             passwd="ipumysql"
+             initialSize="5"
+             maxActive="20"
+             maxIdle="5"
+             maxWait="1000"
+     />
+</database>

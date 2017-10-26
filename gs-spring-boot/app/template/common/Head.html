@@ -1,0 +1,26 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1"><!-- 宽度自动适配 -->
+<meta content="telephone=no" name="format-detection" /><!-- 不识别页面上的数字为可拨打号码 -->
+
+<link rel="stylesheet" type="text/css" href="ipu/css/ipu.css">
+<link rel="stylesheet" type="text/css" href="dep/css/awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="biz/css/demo.css">
+<script src="dep/js/requirejs/require.js"></script>
+<script src="ipu/js/require-config.js"></script>
+<script src="biz/js/common/require-config.js" ></script>
+
+<!--注:由于html页面会被加密,不能使用双斜杠作为注释符号-->
+<script>
+/*自定义增加每个页面需要执行的公共逻辑*/
+require(["domReady!","mobile","jcl","tap"],function(doc, Mobile, $) {
+	/*每个页面的back样式都需要执行回退*/
+	$("#left-btn").tap(function(){
+		Mobile.back();
+	});
+	
+	$("#right-btn").tap(function(){
+		/**TODO 打开主页之前需要清空回退栈**/
+		Mobile.openPage("Index");
+	});
+}); 
+</script>

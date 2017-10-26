@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<config name="name" value="IpuHome"/>
+	<config name="engine" value="beetl"/>
+	<config name="encode" value="UTF-8"/>
+	<config name="indexPage" value="Index"/>
+	<!-- 缓存类型,目前支持mem和jvm -->
+	<config name="cache" value="mem"/>
+	<!-- 文件是否加密 -->
+	<config name="fileEncrypt" value="false"/>
+	<!-- 自定义异常管理器
+	<config name="exceptionHandler" value="com.ai.ipu.cf.core.handle.IpuExceptionHandler"/>-->
+	<!-- 自定义Session管理器 -->
+	<config name="sessionManager" value="com.ai.ipu.archivement.core.session.IpuSessionManager"/>
+</configs>
